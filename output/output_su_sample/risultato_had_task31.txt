@@ -1,4 +1,5 @@
 #RISULTATO DI ESECUZIONE SINGLE-NODE DEL TASK 3.1 SU FLIGHT_SAMPLE_CLEANED.CSV
+#HADOOP MAP REDUCE
 
 9E	ABE	VoliTotali:2	VoliInRitardo:0	DelayMin:0	DelayMax:0	DelayAvg:0.00	TassoCanc:0.00%	Mesi:[7,9]
 9E	ALB	VoliTotali:2	VoliInRitardo:1	DelayMin:191.0	DelayMax:191.0	DelayAvg:191.00	TassoCanc:0.00%	Mesi:[3,8]

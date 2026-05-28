@@ -1,0 +1,17 @@
+TECNOLOGIA,PERCENTUALE,AMBIENTE,TEMPO_SECONDI
+mapreduce,10,hdfs,17
+hive,10,hdfs,35
+spark,10,hdfs,20
+
+mapreduce,30,hdfs,23
+hive,30,hdfs,53
+spark,30,hdfs,21
+
+mapreduce,50,hdfs,28
+hive,50,hdfs,53
+spark,50,hdfs,24
+
+mapreduce,100,hdfs,49
+hive,100,hdfs,67
+spark,100,hdfs,33
+----------------------------------

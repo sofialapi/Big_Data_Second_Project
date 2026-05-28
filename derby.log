@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu May 28 12:36:06 CEST 2026:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-019e-6e27-db3d-000001ba1650 
+on database directory /home/sofia/Big_Data_Second_Project/metastore_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5ffd2b27 
+Loaded from file:/home/sofia/apache-hive-2.3.9/lib/derby-10.10.2.0.jar
+java.vendor=Ubuntu
+java.runtime.version=11.0.30+7-post-Ubuntu-1ubuntu122.04
+user.dir=/home/sofia/Big_Data_Second_Project
+os.name=Linux
+os.arch=amd64
+os.version=5.15.0-179-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
