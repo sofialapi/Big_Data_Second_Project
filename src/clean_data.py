@@ -20,7 +20,7 @@ def main():
     
     print(f"[*] Inizio lettura del dataset da: {input_path}")
 
-    # 1. Lettura del file CSV
+    # Lettura del file CSV
     # header=True mantiene i nomi delle colonne
     # inferSchema=True identifica automaticamente i tipi (es. interi per month, float per i ritardi)
     df = spark.read.csv(input_path, header=True, inferSchema=True)
@@ -40,7 +40,7 @@ def main():
 
     print("[*] Selezione delle colonne e filtraggio dei record nulli...")
 
-    # 2. Selezione delle sole colonne desiderate e pulizia dei valori nulli per le colonne opportune (vedi sotto)
+    # Selezione delle sole colonne desiderate e pulizia dei valori nulli per le colonne opportune (vedi nota)
     # Nota: Per 'cancellation_code', il valore nullo è semanticamente corretto 
     # se il volo NON è stato cancellato. Di conseguenza, escludiamo dal filtro dei nulli 
     # questa specifica colonna per evitare di perdere i voli regolari.
@@ -58,11 +58,11 @@ def main():
 
     print(f"[*] Scrittura del dataset pulito...")
 
-    # 1. Salvataggio in formato PARQUET (per Task 3.2 - Hive e Spark SQL)
+    # Salvataggio in formato PARQUET (per Task 3.2 - Hive e Spark SQL)
     # Crea una cartella con i file .parquet ottimizzati e compressi
     df_cleaned.write.mode("overwrite").parquet(output_path + "_parquet")
 
-    # 2. Salvataggio in formato CSV (per Task 3.1 - MapReduce)
+    # Salvataggio in formato CSV (per Task 3.1 - MapReduce)
     # Crea una cartella con i file .csv puliti, che verranno poi letti riga per riga da sys.stdin
     # header=False risulta consigliato per MapReduce per non dover gestire la riga dei titoli nel Mapper
     df_cleaned.write.mode("overwrite").csv(output_path + "_csv", header=False)

@@ -3,7 +3,7 @@ import sys
 from pyspark.sql import SparkSession
 
 if __name__ == "__main__":
-    # Inizializza la sessione Spark
+    # Inizializzazione sessione Spark
     spark = SparkSession.builder \
         .appName("Flight Task 3.2 - Spark SQL") \
         .getOrCreate()
@@ -12,13 +12,13 @@ if __name__ == "__main__":
     input_path = sys.argv[1] if len(sys.argv) > 1 else "/home/sofia/flights_sample_cleaned_parquet"
     output_path = "/home/sofia/Big_Data_Second_Project/output/risultato_spark_task32_temp"
 
-    # 1. Legge i dati dal formato Parquet locale o distribuito
+    # Legge i dati dal formato Parquet locale o distribuito
     df = spark.read.parquet(input_path)
 
-    # 2. Crea una vista temporanea per poter usare l'SQL standard
+    # Crea una vista temporanea per poter usare l'SQL standard
     df.createOrReplaceTempView("flights")
 
-    # 3. Esegue la query con l'aggregazione condizionale (Pivoting) e arrotondamenti a 2 decimali
+    # Esegue la query con l'aggregazione condizionale (Pivoting) e arrotondamenti a 2 decimali
     query = """
     SELECT 
         origin,
@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
     result_df = spark.sql(query)
 
-    # 4. Salva il risultato in un unico file CSV con l'intestazione inclusa!
+    # Salva il risultato in un unico file CSV con l'intestazione
     result_df.coalesce(1).write \
         .mode("overwrite") \
         .option("header", "true") \

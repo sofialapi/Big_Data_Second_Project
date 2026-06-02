@@ -14,4 +14,3 @@ spark,50,hdfs,24
 mapreduce,100,hdfs,49
 hive,100,hdfs,67
 spark,100,hdfs,33
-----------------------------------

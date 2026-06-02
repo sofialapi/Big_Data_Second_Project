@@ -63,7 +63,7 @@ for line in sys.stdin:
             # Gestisce eventuali stringhe sporche o vuote nei ritardi
             pass
 
-# Stampa tassativa dell'ultimo gruppo rimasto in coda
+# Stampa dell'ultimo gruppo rimasto in coda
 if current_key:
     carrier, origin = current_key.split(",")
     avg_delay = total_delay / delayed_flights_count if delayed_flights_count > 0 else 0
